@@ -1,4 +1,4 @@
-package gui;
+package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,7 +11,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import model.Department;
+import model.components.Department;
 
 public class DepartmentListController implements Initializable{
 

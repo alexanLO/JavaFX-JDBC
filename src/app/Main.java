@@ -16,7 +16,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/controller/MainView.fxml"));
             ScrollPane scrollPane = loader.load();
 
             // macete para deixar o scrollPane ocupando toda a tela
