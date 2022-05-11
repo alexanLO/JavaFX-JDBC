@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import app.Main;
+import controller.util.Alerts;
+import controller.util.Utils;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -23,8 +25,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.components.Department;
 import model.service.DepartmentService;
-import util.Alerts;
-import util.Utils;
 
 public class DepartmentListController implements Initializable{
 
