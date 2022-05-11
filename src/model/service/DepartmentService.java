@@ -1,10 +1,10 @@
-package model.service;
+package Model.service;
 
 import java.util.List;
 
-import model.components.Department;
-import model.dao.DaoFactory;
-import model.dao.DepartmentDao;
+import Model.Components.Department;
+import Model.dao.DaoFactory;
+import Model.dao.DepartmentDao;
 
 public class DepartmentService {
     

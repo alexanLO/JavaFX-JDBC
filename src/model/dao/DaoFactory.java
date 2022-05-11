@@ -1,8 +1,8 @@
-package model.dao;
+package Model.dao;
 
-import db.DB;
-import model.dao.implementacao.DepartmentDaoJDBC;
-import model.dao.implementacao.SellerDaoJDBC;
+import DB.DB;
+import Model.dao.Resource.DepartmentDaoJDBC;
+import Model.dao.Resource.SellerDaoJDBC;
 
 public class DaoFactory { // daofactory tera functions static para instanciar o dao
 

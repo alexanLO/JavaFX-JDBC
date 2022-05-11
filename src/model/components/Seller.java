@@ -1,4 +1,4 @@
-package model.components;
+package Model.Components;
 import java.util.Date;
 
 public class Seller {

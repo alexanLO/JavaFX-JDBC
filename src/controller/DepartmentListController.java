@@ -1,13 +1,16 @@
-package controller;
+package Controller;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import app.Main;
-import controller.util.Alerts;
-import controller.util.Utils;
+import App.Main;
+import Controller.Util.Alerts;
+import Controller.Util.Utils;
+import Interface.DataChangeListener;
+import Model.Components.Department;
+import Model.service.DepartmentService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -23,10 +26,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import model.components.Department;
-import model.service.DepartmentService;
 
-public class DepartmentListController implements Initializable{
+public class DepartmentListController implements Initializable, DataChangeListener{
 
     private DepartmentService departmentService;
 
@@ -86,7 +87,9 @@ public class DepartmentListController implements Initializable{
 
             controllerForm.setDepartment(obj);
             controllerForm.setDepartmentService(new DepartmentService());
+            controllerForm.subscribeDataChangeListener(this);
             controllerForm.updateFormData();
+
 
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Enter Department data");
@@ -98,5 +101,10 @@ public class DepartmentListController implements Initializable{
         } catch (IOException e) {
          Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), AlertType.ERROR);
         }
+    }
+
+    @Override
+    public void onDataChanged() {
+        updateTableView();
     }
 }

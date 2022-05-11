@@ -1,9 +1,9 @@
-package model.dao;
+package Model.dao;
 
 import java.util.List;
 
-import model.components.Department;
-import model.components.Seller;
+import Model.Components.Department;
+import Model.Components.Seller;
 
 public interface SellerDao {
     
