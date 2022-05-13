@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -42,8 +43,8 @@
             <TextField fx:id="txtBaseSalary" layoutX="79.0" layoutY="127.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="labelErrorBaseSalary" text="Base Salary" GridPane.rowIndex="4" />
             <Label textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <TextField editable="false" layoutX="79.0" layoutY="139.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label text="Department" GridPane.rowIndex="5" />
+            <ComboBox fx:id="comboBoxDepartment" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>
                   <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#onButtonSaveAction" text="Save" />

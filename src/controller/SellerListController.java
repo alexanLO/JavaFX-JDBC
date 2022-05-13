@@ -13,6 +13,7 @@ import Controller.Util.Utils;
 import DB.DbIntegrityException;
 import Interface.DataChangeListener;
 import Model.Components.Seller;
+import Model.service.DepartmentService;
 import Model.service.SellerService;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
@@ -111,7 +112,8 @@ public class SellerListController implements Initializable, DataChangeListener {
             SellerFormController controllerForm = loader.getController();
 
             controllerForm.setSeller(obj);
-            controllerForm.setSellerService(new SellerService());
+            controllerForm.setServices(new SellerService(), new DepartmentService());
+            controllerForm.loadAssociatedObjects();
             controllerForm.subscribeDataChangeListener(this);
             controllerForm.updateFormData();
 
