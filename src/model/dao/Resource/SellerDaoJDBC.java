@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,7 +36,7 @@ public class SellerDaoJDBC implements SellerDao {
                             + "(Name, Email, BirthDate, BaseSalary, DepartmentId)"
                             + "VALUES"
                             + "(?, ?, ?, ?, ?)",
-                    st.RETURN_GENERATED_KEYS);
+                    Statement.RETURN_GENERATED_KEYS);
 
             st.setString(1, seller.getName());
             st.setString(2, seller.getEmail());
